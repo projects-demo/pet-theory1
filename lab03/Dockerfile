@@ -1,7 +1,5 @@
 FROM amd64/debian
-RUN apt-get update -y \
-  && apt-get install -y libreoffice \
-  && apt-get clean
+RUN apt-get update -y 
 WORKDIR /usr/src/app
 COPY server .
 CMD [ "./server" ]
